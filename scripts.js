@@ -15,14 +15,28 @@ function createGrid(gridSize, color){
   }
   $(".col").height(cellSize).width(cellSize);
   paintCell(color);
+  changeColor();
 }
 //why is this so slow in mozilla???
 
+function rand() {
+   return (Math.floor((Math.random() * 250) + 1));
+}
+/*
+function changeColor(){
+  $("#color").click(function() {
+    $('span').text("Rainbow");
+    color = 'rgb('+ rand() + ',' + rand() + ',' + rand() + ')';
+    console.log(color);
+  });
+}
+*/
 $(document).ready(function() {
 var color = '#000';
 var gridSize = 16;
 //initialize grid
 createGrid(gridSize, color);
+changeColor();
 //reset grid color
 $("#reset").click(function() {
   $(".col").css("background-color", "transparent");

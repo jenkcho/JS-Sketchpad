@@ -2,19 +2,55 @@
   margin: 0;
   padding: 0;
   font-size: 100%;
-  box-sizing: border-box;
   position: relative;
 }
 
+h1 {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.controls {
+  position: relative; 
+  display: block;
+  background-color: #262829;
+  padding: 20px 50px;
+  margin: 20px 0;
+  color: white;
+}
+
+#size {
+  width: 80px;
+  text-align: left;
+}
+
+span {
+  padding: 5px;
+  margin: 0 10px;
+  border: 1px dotted white;
+}
+
+button {
+  padding: 3px;
+  font-weight: bold
+}
+
 #grid {
-  background-color: #EEE;
+  background-color: #f5f5f5;
   font-size: 0;
   /* ^ divs preserve whitespace in the code and setting font
   to 0 removes the spacing */
+  box-sizing: border-box;
   width: 600px;
   height: 600px;
 }
 
 .row {
 display: inline-block;
+}
+
+#wrapper {
+  position: absolute;
+  left: 10%;
 }
